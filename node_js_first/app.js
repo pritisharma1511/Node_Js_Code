@@ -5,4 +5,7 @@ console.log(arr.map((num) => num * 5));
 
 // console.log(module);
 
-globalThis.console.log(module);
+// globalThis.console.log(module);
+
+console.log(process);
+
