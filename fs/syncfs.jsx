@@ -12,5 +12,11 @@ const path = require('path');
 // utf-8 (short for "8-bit Unicode Transformation Format") Encodes characters from nearly all written languages, symbols, and emojis.
 
 const fileName = "test.txt";
-const writeFile = fs.writeFileSync(fileName,"this is the intial data","utf-8");
+const filepath = path.join(__dirname, fileName);
+console.log(__dirname);
+
+
+const writeFile = fs.writeFileSync(filepath,"this is the intial data","utf-8");
 console.log(writeFile); // undefined
+
+
