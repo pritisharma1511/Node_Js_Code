@@ -1,4 +1,3 @@
-
 const os = require("os");
 
 // 1. Get the OS platform & User Info
