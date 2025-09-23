@@ -9,7 +9,7 @@
 
 // console.log(process);
 
-const add = require('./math');
+const {add ,mul} = require('./math');
 
 console.log(add(5,10));
-
+console.log(mul(5,10));
