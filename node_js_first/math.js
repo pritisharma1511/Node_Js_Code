@@ -14,4 +14,7 @@ const div = (a,b) => {
     return a / b;
 };
 
-module.exports = add;
+module.exports.add = add;
+module.exports.subs = subs;
+module.exports.mul = mul;
+module.exports.div = div;
