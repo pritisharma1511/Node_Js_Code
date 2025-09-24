@@ -43,10 +43,10 @@ fs.readFile(filePath, "utf-8", (err, data) => {
 //! syntax: fs.appendFile(path, data, options, callback);
 
 //*-------------------------------------------------------------------------------------*
-// fs.appendFile(filePath, "\nThis is the Updated Data", "utf-8", (err) => {
-//   if (err) console.error(err);
-//   else console.log("File has been Updated");
-// });
+fs.appendFile(filePath, "\nThis is the Updated Data", "utf-8", (err) => {
+  if (err) console.error(err);
+  else console.log("File has been Updated");
+});
 
 //*-------------------------------------------------------------------------------------*
 //* fs.unlink(): Deletes a file asynchronously.
