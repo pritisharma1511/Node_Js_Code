@@ -4,8 +4,32 @@ const path = require("path");
 const fileName = "fsPromises.txt";
 const filePath = path.join(__dirname, fileName);
 
-const file = __dirname;
+
+// const fileName1 = __dirname;
+// fs.promises.readdir(fileName1)
+//     .then((data) => console.log(data))
+//     .catch((err) => console.error(err));
+
+
 fs.promises
-     .readdir(file)
-     .then((data) => console.log(data))
-     .catch((err) => console.error(err));
+    .writeFile(filePath, "This is the initial Data", "utf-8")
+
+    .then(() => console.log("File written successfully"))
+    .catch((err) => {
+        console.error( err);
+    });
+
+    
+
+
+
+
+
+
+
+
+// const file = __dirname;
+// fs.promises
+//      .readdir(file)
+//      .then((data) => console.log(data))
+//      .catch((err) => console.error(err));
