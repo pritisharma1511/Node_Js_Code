@@ -15,10 +15,10 @@ const filePath = path.join(__dirname, fileName);
 //? callback: A function with an err parameter.
 //*-------------------------------------------------------------------------------------*
 
-// fs.writeFile(filePath, "This is the initial Data", "utf-8", (err) => {
-//   if (err) console.error(err);
-//   else console.log("File has been Saved");
-// });
+fs.writeFile(filePath, "This is the initial Data", "utf-8", (err) => {
+  if (err) console.error(err);
+  else console.log("File has been Saved");
+});
 
 //*-------------------------------------------------------------------------------------*
 //* fs.readFile(): Reads the contents of a file asynchronously and returns the data as a buffer or string.
