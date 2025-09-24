@@ -12,14 +12,14 @@ const filePath = path.join(__dirname, fileName);
 
 
 fs.promises
-    .writeFile(filePath, "This is the initial Data", "utf-8")
+    .readFileFile(filePath, "This is the initial Data", "utf-8")
 
-    .then(() => console.log("File written successfully"))
-    .catch((err) => {
-        console.error( err);
+    .then((data) => console.log(data))
+    .catch((err) => { console.error("error reading file:", err);
     });
 
-    
+
+
 
 
 
