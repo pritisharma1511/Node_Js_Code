@@ -53,7 +53,7 @@ fs.appendFile(filePath, "\nThis is the Updated Data", "utf-8", (err) => {
 //! syntax: fs.unlink(path, callback);
 
 //*-------------------------------------------------------------------------------------*
-// fs.unlink(filePath, (err) => {
-//   if (err) console.error(err);
-//   else console.log("File has been Deleted");
-// });
+fs.unlink(filePath, (err) => {
+  if (err) console.error(err);
+  else console.log("File has been Deleted");
+});
