@@ -1,7 +1,7 @@
 const fs = require("fs/promises");
 const path = require("path");
 
-const fileName = "asyncFile.txt";
+const fileName = "fsAsyncAwait.txt";
 const filePath = path.join(__dirname, fileName);
 
 // const filePath1 = __dirname;
