@@ -20,4 +20,12 @@ const filePath1 = __dirname;
 // };
 // readFolder();
 
-const 
+const  writeFileExample = async () => {
+    try {
+        await fs.writeFile(filePath, "this is the initial data", "utf-8");
+        console.log("File created successfully!");
+    } catch (err) {
+        console.log(err);
+    }   
+};
+writeFileExample();
