@@ -15,10 +15,10 @@ const filePath = path.join(__dirname, fileName);
 //? callback: A function with an err parameter.
 //*-------------------------------------------------------------------------------------*
 
-fs.writeFile(filePath, "This is the initial Data", "utf-8", (err) => {
-  if (err) console.error(err);
-  else console.log("File has been Saved");
-});
+// fs.writeFile(filePath, "This is the initial Data", "utf-8", (err) => {
+//   if (err) console.error(err);
+//   else console.log("File has been Saved");
+// });
 
 //*-------------------------------------------------------------------------------------*
 //* fs.readFile(): Reads the contents of a file asynchronously and returns the data as a buffer or string.
@@ -33,10 +33,10 @@ fs.writeFile(filePath, "This is the initial Data", "utf-8", (err) => {
 //   else console.log(data.toString());
 // });
 
-// fs.readFile(filePath, "utf-8", (err, data) => {
-//   if (err) console.error(err);
-//   else console.log(data);
-// });
+fs.readFile(filePath, "utf-8", (err, data) => {
+  if (err) console.error(err);
+  else console.log(data);
+});
 
 //*-------------------------------------------------------------------------------------*
 //* fs.appendFile(): Appends data to a file. If the file doesn’t exist, it is created.
