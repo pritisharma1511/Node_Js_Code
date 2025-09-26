@@ -1,0 +1,19 @@
+{
+  "name": "node_js",
+  "version": "1.0.0",
+  "description": "node and express js series",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pritisharma1511/Node_Js_Code.git"
+  },
+  "author": "pritiSharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pritisharma1511/Node_Js_Code/issues"
+  },
+  "homepage": "https://github.com/pritisharma1511/Node_Js_Code#readme"
+}
