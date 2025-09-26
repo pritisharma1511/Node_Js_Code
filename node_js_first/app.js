@@ -18,11 +18,10 @@
 // import mul from "./math.js"
 // console.log(mul(5,10));
 
-import {mul,div,add,subs} from "./math.js";
-
+import {div,mul,add,subs} from "./math.js"
 // const math = require('./math');
 
-console.log(math.add(5,10));
-console.log(math.mul(5,10));
-console.log(math.div(5,10));
-console.log(math.subs(5,10));
+console.log(add(5,10));
+console.log(mul(5,10));
+console.log(div(5,10));
+console.log(subs(5,10));
