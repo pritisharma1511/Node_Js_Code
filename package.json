@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pritisharma1511/Node_Js_Code/issues"
   },
-  "homepage": "https://github.com/pritisharma1511/Node_Js_Code#readme"
+  "homepage": "https://github.com/pritisharma1511/Node_Js_Code#readme",
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
