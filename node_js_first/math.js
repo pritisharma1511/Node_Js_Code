@@ -19,4 +19,6 @@ const div = (a,b) => {
 // module.exports.mul = mul;
 // module.exports.div = div;
 
-module.exports = {add,subs,mul,div};
+// module.exports = {add,subs,mul,div};
+
+export default mul;
