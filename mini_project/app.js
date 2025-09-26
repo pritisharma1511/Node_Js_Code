@@ -11,6 +11,7 @@ const showMenu = () => {
     console.log("\n 1: Add a Task");
     console.log("2: View Tasks");
     console.log("3: Exit");
+    rl.question("Choose an option :",handleInput)
 }
 
 
