@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "node and express js series",
   "main": "app.js",
-  "type":"module",
-  "directories":{
-    "test":"test"
+  "type": "module",
+  "directories": {
+    "test": "test"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/pritisharma1511/Node_Js_Code#readme",
   "dependencies": {
+    "chalk": "^5.6.2",
+    "express": "^5.1.0",
     "nodemon": "^3.1.10"
   }
 }
