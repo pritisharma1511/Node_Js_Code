@@ -21,4 +21,5 @@ const div = (a,b) => {
 
 // module.exports = {add,subs,mul,div};
 
-export default mul;
+// export default mul;
+export {add,mul,div,subs} ;

@@ -18,7 +18,7 @@
 import mul from "./math.js"
 console.log(mul(5,10));
 
-
+import {mul,div,add,subs} from "./math.js";
 
 // const math = require('./math');
 
