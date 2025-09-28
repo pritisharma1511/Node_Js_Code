@@ -15,14 +15,14 @@ const showMenu = () => {
 }
 
 const handleInput = (option) => {
-    if(option === 1){
-        readline.question("enter the Task:", (task) =>{
+    if(option === "1"){
+        rl.question("enter the Task:", (task) =>{
             todos.push(task);
             console.log("Task added:" ,task);
             showMenu()
         })
      }
-     else if(option === 2){
+     else if(option === "2"){
         console.log("\n your Todo Lists");
         todos.forEach((task,index) => {
             console.log(`${index+1}.${task}`);
@@ -30,7 +30,7 @@ const handleInput = (option) => {
         showMenu();
         
         }
-        else if(option === 3){
+        else if(option === "3"){
             console.log('good bye');
             rl.close();
         }
