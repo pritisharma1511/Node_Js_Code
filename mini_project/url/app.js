@@ -3,6 +3,7 @@ import { createServer } from "http";
 import path from "path";
 import crypto from "crypto";
 import {json} from "stream/consumers";
+import { writeFile } from "fs";
 
 const PORT = 3002;
 const DATA_FILE = path.join("data","links.json");
@@ -31,6 +32,9 @@ const loadLinks = async () => {
     throw error;
   }
 }
+const saveLinks = () =>{
+   await writeFile(DATA_FILE,JSON.stringify(links));
+}
 
 const server = createServer(async ( req,res) => {
    console.log(req.url);
@@ -46,10 +50,8 @@ const server = createServer(async ( req,res) => {
 
           const links = await loadLinks();
           const body = "";
-          req.on("data",(chunk) => {
-            body = body + chunk;
-          });
-          req.on("end",() => {
+          req.on("data",(chunk) => (body += chunk) );
+          req.on("end",async () => {
              console.log(body);
              const {url, shortCode} = JSON.parse(body);
 
@@ -58,6 +60,16 @@ const server = createServer(async ( req,res) => {
               return res.end("url is required")
              }
              const finalShortCode = shortCode || crypto.randomBytes(4).toString("hex");
+
+             if(links[finalShortCode]){
+               res.writeHead(400,{"Content-Type":"text/plain"});
+              return res.end("short codfe already exists");
+             }
+             links[finalShortCode] = url;
+             await saveLinks(links);
+
+             res.writeHead(200,{"Content-type":"application/json"});
+             res.end(JSON.stringify({ success:true , shortCode : finalShortCode}));
           });
         }
        });

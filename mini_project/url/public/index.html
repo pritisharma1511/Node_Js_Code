@@ -26,13 +26,29 @@
 
         <script>
             document.getElementById('shorten-form')
-            .addEventListener('submit',(event) => {
+            .addEventListener('submit',async(event) => {
                 event.preventDefault();
 
                 const formData= new FormData(event.target);
                 const url = formData.get('url');
                 const shortCode = formData.get('shortCode')
                 console.log(url, shortCode);
+                try{
+                    const respons4e = await fetcg ("/shorten",{
+                        method:"POST",
+                        headers:{"Content-Type":"application/json"},
+                        body : JSON.stringify({url,shortCode})
+                    });
+                    if(response.ok){
+                        alert("form sumitted successfully");
+                    }else{
+                        const errorMessage = await response.text();
+                        alert(errorMessage)
+                    }
+
+                }catch (error){
+                   console.log(error);
+                }
             })
         </script>
     </body>
