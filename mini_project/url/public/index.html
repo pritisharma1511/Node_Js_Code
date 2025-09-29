@@ -41,6 +41,7 @@
                     });
                     if(response.ok){
                         alert("form sumitted successfully");
+                        even.target.reset();
                     }else{
                         const errorMessage = await response.text();
                         alert(errorMessage)

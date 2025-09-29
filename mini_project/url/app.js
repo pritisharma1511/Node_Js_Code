@@ -32,7 +32,7 @@ const loadLinks = async () => {
     throw error;
   }
 }
-const saveLinks = () =>{
+const saveLinks = async () =>{
    await writeFile(DATA_FILE,JSON.stringify(links));
 }
 
