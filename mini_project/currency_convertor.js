@@ -44,4 +44,4 @@ https.get(url, (response) => {
       console.error(chalk.red("Error parsing JSON:", err.message));
     }
   });
-});
+});//1
