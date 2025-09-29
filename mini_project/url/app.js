@@ -49,7 +49,7 @@ const server = createServer(async ( req,res) => {
         if(req.method === "POST" && req.url === "/shorten") {
 
           const links = await loadLinks();
-          const body = "";
+          let body = "";
           req.on("data",(chunk) => (body += chunk) );
           req.on("end",async () => {
              console.log(body);
