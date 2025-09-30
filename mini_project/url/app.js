@@ -22,7 +22,7 @@ const serverFile = async (res,filePath,contentType) => {
 const loadLinks = async () => {
   try{
     const data = await readFile(DATA_FILE,"utf-8");
-    return json.parse(data);
+    return JSON.parse(data);
   }
   catch(error){
     if(error.code === "ENOENT"){
