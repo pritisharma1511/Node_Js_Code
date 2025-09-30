@@ -25,6 +25,17 @@
         </div>
 
         <script>
+       
+            const fetchShortenedURL = async () => {
+                const response = await fetch ("/links");
+                const links = await response.json();
+                console.log("links ",links);
+            }
+
+
+
+
+
             document.getElementById('shorten-form')
             .addEventListener('submit',async(event) => {
                 event.preventDefault();
@@ -34,12 +45,13 @@
                 const shortCode = formData.get('shortCode')
                 console.log(url, shortCode);
                 try{
-                    const respons4e = await fetcg ("/shorten",{
+                    const response = await fetch("/shorten",{
                         method:"POST",
                         headers:{"Content-Type":"application/json"},
                         body : JSON.stringify({url,shortCode})
                     });
                     if(response.ok){
+                        fetchShortenedURL();
                         alert("form sumitted successfully");
                         even.target.reset();
                     }else{
@@ -51,6 +63,9 @@
                    console.log(error);
                 }
             })
+            
+              fetchShortenedURL();
+
         </script>
     </body>
 
