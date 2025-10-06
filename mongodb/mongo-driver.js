@@ -19,6 +19,9 @@ userCollection.insertOne({name :"priti sharma",age : 20});
 // const userCursor = await userCollection.find().toArray();
 // console.log(userCursor);
 
-const user = await userCollection.findOne({name : "priti sharma"});
-console.log(user);
-console.log(user._id.toHexString());
+// const user = await userCollection.findOne({name : "priti sharma"});
+// console.log(user);
+// console.log(user._id.toHexString());
+
+//update
+await userCollection.updateOne({name : "priti"},{ $set:{age : 30}});
