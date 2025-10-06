@@ -25,3 +25,6 @@ userCollection.insertOne({name :"priti sharma",age : 20});
 
 //update
 await userCollection.updateOne({name : "priti"},{ $set:{age : 30}});
+
+//Delete
+ await userCollection.deleteOne({name:"priti"});
